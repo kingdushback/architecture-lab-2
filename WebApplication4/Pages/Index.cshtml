@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+
+<div class="text-center">
+    <label for="message">Ваше сообщение</label>
+    <input type="text" id="message" name="message"><br><br>
+    <p></p>
+    <button type="button" id="submitButton" onclick="sign(); return false;">Подписать</button>
+    <label for="signedMessage">Подписанное сообщение</label>
+    <input type="text" id="signedMessage" name="signedMessage"><br><br>
+    <button type="button" id="submitVerifyButton" onclick="verify(); return false;">Верифицировать</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button type="button" id="generateRandom" onclick="generateRandom(); return false;">Сгенерировать сообщение</button>
+    <label for="randomMessage">Случайное сообщение</label>
+    <input type="text" id="randomMessage" name="randomMessage"><br><br>
+    <label for="randomMessageSigned">Подпись</label>
+    <input type="text" id="randomMessageSigned" name="randomMessageSigned"><br><br>
+    <button type="button" id="getPublicKey" onclick="getPublicKey(); return false;">Получить публичный ключ</button>
+    <label for="publicKey">Публичный ключ</label>
+    <input type="text" id="publicKey" name="publicKey"><br><br>
+    <button type="button" id="verifyWithPublic" onclick="verifyWithPublic(); return false;">Проверить</button>
+</div>
+
+
